@@ -1,0 +1,57 @@
+<% layout('layouts/boilerplate') %>
+  <div class="row">
+    <h1 class="text-center">New Campground</h1>
+    <div class="col-md-6 offset-md-3">
+      <form action="/campgrounds" method="post" class="needs-validation fileLimit" novalidate enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="title" class="form-label">title</label>
+          <input type="text" class="form-control" id="title" placeholder="HorseCamp" name="campground[title]" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input type="text" class="form-control" id="location" placeholder="Las Vegas,Nevada"
+            name="campground[location]" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="image" class="form-label">choose Image(s)</label>
+          <input class="form-control" type="file" id="image" name="image" required multiple onchange="validateSize(this)">
+          <div id="imgPreview" class="d-flex row justify-content-start mt-3"></div>
+          <div class="text-danger d-none notify">You can't uploaded more than 7 images</div>
+          <div class="text-danger d-none notify2">You can't uploaded image that size exceeds 2MB</div>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please upload an image.</div>
+        </div>
+    <div class="mb-3">
+      <label class="form-label" for="price">Campground Price</label>
+      <div class="input-group">
+        <span class="input-group-text" id="price-label">$</span>
+        <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
+          aria-describedby="price-label" name="campground[price]" required>
+      </div>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea type="text" class="form-control" id="description" placeholder="bla" name="campground[description]"
+        required></textarea>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="mb-3">
+      <button class="btn btn-success" type="submit">create</button>
+    </div>
+    </form>
+  </div>
+  </div>
+  <script src="/javascripts/fileLimit.js"></script>
+  <script src="/javascripts/filesizeLimit.js"></script>
+  <script src="/javascripts/previewImages.js"></script>
