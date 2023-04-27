@@ -22,7 +22,7 @@ This is a web application that allows you to view, add, and review campgrounds f
 
 To run this project locally, you need to have Node.js 14+, MongoDB 4+, and Git installed on your machine.
 
-1. Clone this repository: `git clone https://github.com//yelpcamp.git`
+1. Clone this repository: `https://github.com/RameshRaja05/YelpCamp.git`
 2. Navigate to the project directory: `cd yelpcamp`
 3. Install the dependencies: `npm install`
 4. Create a .env file in the root directory and add the following variables:
