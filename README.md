@@ -16,7 +16,7 @@ This is a web application that allows you to view, add, and review campgrounds f
 - Backend: Node.js, Express, MongoDB, Passport, Mongoose
 - Frontend: HTML, CSS, Bootstrap, JavaScript, EJS
 - APIs: Mapbox, Cloudinary, Geocoder
-- Deployment: Heroku, MongoDB Atlas, GitHub
+- Deployment: Render(you can host website without your credit card details also it supports free tier), MongoDB Atlas(for remote db), GitHub
 
 ## Installation
 
