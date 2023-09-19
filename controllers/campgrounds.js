@@ -21,12 +21,12 @@ const getGeodata=async(location)=>{
 }
 
 
-module.exports.index = async (req, res) => {
+module.exports.index = async (_req, res) => {
     const campgrounds = await CampgroundModel.find({});
     res.render('campgrounds/index', { campgrounds });
 }
 
-module.exports.renderNewForm = (req, res) => {
+module.exports.renderNewForm = (_req, res) => {
     res.render('campgrounds/new');
 }
 
