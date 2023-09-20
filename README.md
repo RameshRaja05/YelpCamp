@@ -32,5 +32,5 @@ To run this project locally, you need to have Node.js 14+, MongoDB 4+, and Git i
     - CLOUDINARY_CLOUD_NAME: the Cloudinary cloud name
     - CLOUDINARY_KEY: the Cloudinary API key
     - CLOUDINARY_SECRET: the Cloudinary API secret
-5. Run the server: `npm start`
+5. Run the server: `npm run serve`
 6. Open your browser and visit http://localhost:3000 to see the website.

@@ -1,9 +1,10 @@
-
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const ReviewModel = require('./review');
 mongoose.set('strictQuery', false);
 const cloudinary = require('cloudinary').v2;
+const mongoosePaginate = require('mongoose-paginate-v2');
+
 //images schema
 const ImageSchema = new Schema({
     url: String,
@@ -82,6 +83,8 @@ campgroundSchema.post('findOneAndDelete', async (campground) => {
         }
     }
 })
+
+campgroundSchema.plugin(mongoosePaginate);
 
 const campGround = mongoose.model('campground', campgroundSchema)
 
